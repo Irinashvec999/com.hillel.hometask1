@@ -6,15 +6,13 @@ public class Calculator {
         public static int sub(int x, int y){
             int result = x - y;
             return result;
-        }
+    }
         public static int div(int x,int y){
-        int result = x / y;
-        return result;
-        }
+            int result = x / y;
+            return result;
+    }
         public static int mul(int x, int y){
-        int result = x * y;
-        return result;
-        }
-
-
+            int result = x * y;
+            return result;
+    }
 }
