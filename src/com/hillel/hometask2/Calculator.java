@@ -6,7 +6,7 @@ public class Calculator {
         return result; }
 
     public static double exercise2(double a, double b) {
-        double result = ( a*a + b*b ) % 2;
+        double result = ( Math.pow(a,2) + Math.pow(b,2) ) % 2;
         return result; }
 
     public static double exercise3(double a, double b, double c) {
