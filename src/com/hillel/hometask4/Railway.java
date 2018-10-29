@@ -12,11 +12,9 @@ public class Railway {
 public static void main(String[] args) {
     int h = Railway.Survivingtime1(50);
     int h2 = Railway.Survivingtime2(50);
-    if (h > h2) {
+    if (h >= h2) {
         System.out.println(" Railway accident!!!");
-    } else if (h == h2) {
-        System.out.println(" Railway accident!!!");
-    } else {
+        } else {
         System.out.println("Yippee! Everyone saved! ");
     }
     }
