@@ -15,7 +15,6 @@ public static void main(String[] args) {
     if (h >= h2) {
         System.out.println(" Railway accident!!!");
         } else {
-        System.out.println("Yippee! Everyone saved! ");
-    }
+        System.out.println("Yippee! Everyone saved! ");}
     }
 }
