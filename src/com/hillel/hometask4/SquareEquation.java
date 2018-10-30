@@ -6,11 +6,11 @@ public class SquareEquation {
         return d;
     }
     public static double Condition1(double a, double b, double c){
-        double x1 = (-(b*b-4*a*c) + Math.pow(b*b-4*a*c,1/2))/(2*a);
+        double x1 = (-b + Math.pow((b*b-4*a*c),1/2))/(2*a);
         return x1;
 }
     public static double Condition11(double a, double b, double c){
-        double x2=(-(b*b-4*a*c)-Math.pow(b*b-4*a*c,1/2))/(2*a);
+        double x2=(-b - Math.pow((b*b-4*a*c),1/2))/(2*a);
         return x2;
 }
     public static double Condition2(double a, double b){
