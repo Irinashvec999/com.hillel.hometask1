@@ -1,14 +1,8 @@
 package com.hillel.hometask5;
 
 public class SeasonsSwitch {
-    public static int month(int x){
-        for (int i = 1; i <= 12; i++);
-        return x;
-    }
-
-
     public static void main(String[] args) {
-        int getMonth = month(3);
+        int getMonth = 3;
         switch (getMonth){
             case 3:
             case 4:
