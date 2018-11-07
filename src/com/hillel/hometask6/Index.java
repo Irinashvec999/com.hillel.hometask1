@@ -10,8 +10,7 @@ public class Index {
             char i1 = inStr.charAt(i);
             if (i1 == 'о') {
                     System.out.print(inStr.indexOf("о",i) + " ");
-            } else {
-                i = i++;
+
             }
         }
     }

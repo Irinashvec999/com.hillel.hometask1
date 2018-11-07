@@ -7,7 +7,7 @@ public class SummNumber10 {
         int sum = 0;
         for (int i = 1; i <= 100; i++) {
             int number = MathUtil.getRandom(-10,9);
-            sum= number;
+            sum= sum+number;
         }
         System.out.println(sum);
     }

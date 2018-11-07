@@ -1,5 +1,6 @@
 package com.hillel.hometask6;
-import com.hillel.Utils.GetRandom;
+
+import com.hillel.Utils.MathUtil;
 
 public class HeadsAndTails {
 
@@ -7,7 +8,7 @@ public class HeadsAndTails {
         int eagle = 0;
         int tale = 0;
         for (int i = 1; i <= 2000; i++) {
-            int randomness = GetRandom.getRandom(0, 1);
+            int randomness = MathUtil.getRandom(0, 1);
             if (randomness == 0) {
                 tale++;
             } else {
