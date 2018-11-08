@@ -1,8 +1,7 @@
 package com.hillel.hometask6;
-
 import com.hillel.Utils.MathUtil;
 
-public class SummNumbers20 {
+public class SumOfNum20 {
     public static void main(String[] args) {
         int sum = 0;
         for (int i = 1; i <= 100; i++) {

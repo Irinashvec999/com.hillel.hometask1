@@ -6,9 +6,9 @@ public class Square {
         for (int row = 0; row < 5; row++) {
             for (int column = 0; column < 5; column++) {
                 if (row == column) {
-                    System.out.println(1);
+                    System.out.print(1);
                 } else {
-                    System.out.println(0);
+                    System.out.print(0);
                 }
             }
             System.out.println();
