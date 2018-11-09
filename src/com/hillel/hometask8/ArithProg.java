@@ -17,7 +17,7 @@ public class ArithProg {
         int quantity = quantityNumber(4);
         System.out.println(firstNum);
 
-            for (int i = firstNum; i < quantity; i++) {
+            for (int i = 1; i < quantity; i++) {
                 int nextNum = firstNum + residual*i;
                 System.out.println( nextNum );
 
