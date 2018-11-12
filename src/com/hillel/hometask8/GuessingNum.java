@@ -9,7 +9,6 @@ public class GuessingNum {
         int e = 0;
         System.out.println("Try to guess the number from 1 to 10: ");
         for (int i = 0; ;i++) {
-            do {
                 int enterNum = MathUtil.getInputNumb();
                 if (enterNum < randomNam) {
                     System.out.println("Your number is smaller. Try again!");
@@ -18,9 +17,6 @@ public class GuessingNum {
                 } else {
                     System.out.println("You guess!!!");
                 }
-                e = enterNum;
-            }
-            while (e == randomNam);
         }
     }
 }
