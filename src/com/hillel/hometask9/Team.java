@@ -7,16 +7,16 @@ public class Team {
         int sumFirstTeam = 0;
         int sumSecondTeam = 0;
 
-        for (int i = 0; i < firstTeam.length; i++) {
-            sumFirstTeam = firstTeam[i] + sumFirstTeam;
-            System.out.print(firstTeam[i] + ", ");
+        for (int i:firstTeam) {
+            sumFirstTeam = i + sumFirstTeam;
+            System.out.print(i + ", ");
         }
         int averageFirst = sumFirstTeam/firstTeam.length;
         System.out.println();
 
-        for (int i = 0; i < secondTeam.length; i++) {
-            sumSecondTeam = secondTeam[i] + sumSecondTeam;
-            System.out.print(secondTeam[i] + ", ");
+        for (int i : secondTeam) {
+            sumSecondTeam = i + sumSecondTeam;
+            System.out.print(i + ", ");
         }
         int averageSecond = sumSecondTeam/secondTeam.length;
         System.out.println();
