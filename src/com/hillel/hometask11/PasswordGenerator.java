@@ -14,19 +14,20 @@ public class PasswordGenerator {
         char [] password = new char[]{findRandomUpper(),findRandomLower(),findRandomDigits(),findUnderscore(),findRandomLower(),findRandomUpper(),findRandomDigits(),findRandomUpper()};
 //Let's doing password unique
         int counter = 0;
+        char [] newPassword = new char[password.length];
        do {
             int rand = MathUtil.getRandom(0,password.length-1);
             if (isUnique (rand,password)){
-                password[counter]= password[rand];
-                counter++;
+                newPassword[counter]= password[rand];
+               counter++;
             }
-        }while (counter<password.length);
-        System.out.println(password);
+        }while (counter < password.length);
+        System.out.println(Arrays.toString(newPassword));
     }
 
-    public static boolean isUnique(int rand, char[] arr){
+    public static boolean isUnique(int rand, char[] arr) {
         for (int i = 0; i < arr.length; i++) {
-            if (i == rand){
+            if (arr[i] == arr[rand]) {
                 return false;
             }
         }
