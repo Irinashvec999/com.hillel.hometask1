@@ -2,11 +2,11 @@ package com.hillel.hometask12;
 import com.hillel.hometask10.Selection;
 
 public class BinarySearch {
-    private static final int NUMBER = 8;
+    private static final int NUMBER = 10;
 
     public static void main(String[] args) {
         int[] arr = {2, 5, 7, 8, 9, 10, 3, 1, 4, 6};
-        Selection.getMin(arr);
+        Selection.getSort(arr);
         show(arr);
     }
 
@@ -19,9 +19,13 @@ public class BinarySearch {
             if (middle < n && n < lastElemOfSearch) {
                 firstElemOfSearch = middle;
                 middle = (lastElemOfSearch + firstElemOfSearch) / 2;
-            } else if (middle > n && n > firstElemOfSearch) {
+            }else if (middle > n && n > firstElemOfSearch) {
                 lastElemOfSearch = middle;
                 middle = (lastElemOfSearch + firstElemOfSearch) / 2;
+            }else if (n==lastElemOfSearch) {
+                middle = lastElemOfSearch;
+            }else if (n==firstElemOfSearch){
+                middle=firstElemOfSearch;
             }else if (n > lastElemOfSearch || n < firstElemOfSearch){
                 return false;
             }

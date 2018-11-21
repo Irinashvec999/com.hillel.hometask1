@@ -12,22 +12,27 @@ public class PasswordGenerator {
 
     public static void main(String[] args) {
         char [] password = new char[]{findRandomUpper(),findRandomLower(),findRandomDigits(),findUnderscore(),findRandomLower(),findRandomUpper(),findRandomDigits(),findRandomUpper()};
-//Let's doing password unique
+
+        //Let's doing password unique
         int counter = 0;
         char [] newPassword = new char[password.length];
-       do {
+        int[] historyRandomNumbers = new int[password.length];
+        Arrays.fill(historyRandomNumbers,-1);
+
+        do {
             int rand = MathUtil.getRandom(0,password.length-1);
-            if (isUnique (rand,password)){
-                newPassword[counter]= password[rand];
+            if (isUnique (rand,historyRandomNumbers)){
+                newPassword[counter] = password[rand];
+                historyRandomNumbers[counter] = rand;
                counter++;
             }
         }while (counter < password.length);
-        System.out.println(Arrays.toString(newPassword));
+        System.out.println(newPassword);
     }
 
-    public static boolean isUnique(int rand, char[] arr) {
+    public static boolean isUnique(int rand, int[] arr) {
         for (int i = 0; i < arr.length; i++) {
-            if (arr[i] == arr[rand]) {
+            if (arr[i] == rand) {
                 return false;
             }
         }
@@ -57,7 +62,4 @@ public class PasswordGenerator {
         char underscore = UNDERSCORE.charAt(0);
         return underscore;
     }
-
-
-
 }

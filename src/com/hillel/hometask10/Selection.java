@@ -2,7 +2,7 @@ package com.hillel.hometask10;
 import com.hillel.Utils.Swap;
 
 public class Selection {
-    public static void getMin(int[]arr) {
+    public static void getSort(int[]arr) {
         int minIndex = 0;
         for (int i = 0; i < arr.length; i++) {
                 minIndex = i;
@@ -17,7 +17,7 @@ public class Selection {
 
     public static void main(String[] args) {
         int[] arr = {3, 7, 0, 2, 4, 1};
-        getMin(arr);
+        getSort(arr);
         show(arr);
     }
 
