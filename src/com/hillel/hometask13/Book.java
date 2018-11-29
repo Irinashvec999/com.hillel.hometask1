@@ -1,12 +1,21 @@
 package com.hillel.hometask13;
 
 public class Book {
-    private String name;
+    private String nameBook;
     private int numberOfPages;
-    private String author;
+    private Author author;
 
-    public void setName(String name){
-        System.out.println(name);
+    public Book(String nameBook, int numberOfPages, Author author) {
+        this.nameBook = nameBook;
+        this.numberOfPages = numberOfPages;
+        this.author = author;
     }
 
+    public String getNameBook() {
+        return nameBook;
+    }
+
+    public String getAuthor() {
+        return author.getName();
+    }
 }
