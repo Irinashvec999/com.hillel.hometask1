@@ -15,7 +15,11 @@ public class Book {
         return nameBook;
     }
 
-    public String getAuthor() {
-        return author.getName();
+    public int getNumberOfPages() {
+        return numberOfPages;
+    }
+
+    public Author getAuthor() {
+        return author;
     }
 }

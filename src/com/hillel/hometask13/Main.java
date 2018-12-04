@@ -1,5 +1,4 @@
 package com.hillel.hometask13;
-
 public class Main {
     public static void main(String[] args) {
 
@@ -14,6 +13,18 @@ public class Main {
         Book book9 = new Book("Head First Object-Oriented Analysis and Design", 289, new Author("Roger Pattisson", 1953));
         Book book10 = new Book("Java: A Beginner's Guide", 369, new Author("Edgar Dallas", 1965));
 
-        Bookshelf.showAllBooks(book1);
+        Bookshelf bookshelf = new Bookshelf();
+        bookshelf.add(book1);
+        bookshelf.add(book2);
+        bookshelf.add(book3);
+        bookshelf.add(book4);
+        bookshelf.add(book5);
+        bookshelf.add(book6);
+        bookshelf.add(book7);
+        bookshelf.add(book8);
+        bookshelf.add(book9);
+        bookshelf.add(book10);
+
+            Bookshelf.showAllBooks();
     }
 }

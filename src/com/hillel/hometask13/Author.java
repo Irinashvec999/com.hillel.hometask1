@@ -12,8 +12,4 @@ public class Author {
     public String getName() {
         return name;
     }
-
-    public int getYearOfBirth() {
-        return yearOfBirth;
-    }
 }
