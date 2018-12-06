@@ -15,13 +15,14 @@ public class Book {
     @Override
     public boolean equals(Object obj) {
         Book incomeBook = (Book) obj;
-        boolean compareName = nameBook.equals(incomeBook);
-        boolean compareAuthor = author.equals(incomeBook);
+        boolean compareName = nameBook.equals(incomeBook.nameBook);
+        boolean compareAuthor = author.equals(incomeBook.author);
         if (compareAuthor && compareName){
             return true;
         }
         return false;
     }
+
     public static void countAddedBooks(Book book){
 
 
