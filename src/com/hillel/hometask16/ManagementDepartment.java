@@ -1,7 +1,5 @@
 package com.hillel.hometask16;
 
-import com.hillel.Utils.Swap;
-
 public class ManagementDepartment {
     private final int TOTAL_COUNT = 15;
     private Employee[] employees = new Employee[TOTAL_COUNT];
