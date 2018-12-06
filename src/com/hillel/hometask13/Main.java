@@ -11,20 +11,28 @@ public class Main {
         Book book7 = new Book("The Definitive Guide to Java Performance", 283, new Author("Roben Klarck", 1970));
         Book book8 = new Book("Head First Java", 428, new Author("Daniel Still", 1963));
         Book book9 = new Book("Head First Object-Oriented Analysis and Design", 289, new Author("Roger Pattisson", 1953));
-        Book book10 = new Book("Java: A Beginner's Guide", 369, new Author("Edgar Dallas", 1965));
+        Book book10 = new Book("Head First Java", 428, new Author("Daniel Still", 1963));
 
-        Bookshelf bookshelf = new Bookshelf();
-        bookshelf.add(book1);
-        bookshelf.add(book2);
-        bookshelf.add(book3);
-        bookshelf.add(book4);
-        bookshelf.add(book5);
-        bookshelf.add(book6);
-        bookshelf.add(book7);
-        bookshelf.add(book8);
-        bookshelf.add(book9);
-        bookshelf.add(book10);
+        Bookshelf bookshelf1 = new Bookshelf();
+        bookshelf1.add(book1);
+        bookshelf1.add(book2);
+        bookshelf1.add(book3);
 
-            Bookshelf.showAllBooks();
+        Bookshelf bookshelf2 = new Bookshelf();
+        bookshelf2.add(book4);
+        bookshelf2.add(book5);
+        bookshelf2.add(book6);
+
+        Bookshelf bookshelf3 = new Bookshelf();
+        bookshelf3.add(book7);
+        bookshelf3.add(book8);
+        bookshelf3.add(book9);
+        bookshelf3.add(book10);
+
+        Bookshelf.showAllBooks();
+        System.out.println();
+        Bookshelf.showAllBooks();
+        System.out.println();
+        Bookshelf.showAllBooks();
     }
 }
