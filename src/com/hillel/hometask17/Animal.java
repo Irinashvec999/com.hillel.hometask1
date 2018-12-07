@@ -1,11 +1,13 @@
 package com.hillel.hometask17;
 
 public abstract class Animal {
-    public enum Name{FISH,DOG,CAT,WOLF,LION}
+    public enum Type {FISH,DOG,CAT,WOLF,LION}
+    public enum Name {REX,PUSHOK,AKELA,OOO,KING}
     public enum Color {BLACK,WHITE,BLUE,RED,YELLOW,PURPLE,GREEN,GRAY,BROWN,PINK,ORANGE}
     public  enum Domestication{WILD,DOMESTIC}
     public enum IsPredator {PREDATOR,NOTPREDATOR}
 
+    private static Type type;
     private static Name name;
     private Color color;
     private int age;
@@ -13,7 +15,8 @@ public abstract class Animal {
     private static IsPredator isPredator;
     private static Domestication domestication;
 
-    public Animal(Name name, Color color, int age, double weight,Domestication domestication, IsPredator isPredator) {
+    public Animal(Type type,Name name, Color color, int age, double weight, Domestication domestication, IsPredator isPredator) {
+        this.type = type;
         this.name = name;
         this.color = color;
         this.age = age;
@@ -22,9 +25,12 @@ public abstract class Animal {
         this.isPredator = isPredator;
     }
 
-
     public static Name getName() {
         return name;
+    }
+
+    public static Type getType() {
+        return type;
     }
 
     public static Domestication getDomestication() {
