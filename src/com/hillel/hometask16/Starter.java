@@ -19,9 +19,15 @@ public class Starter {
         managementDepartment.add(employee6);
         managementDepartment.add(employee7);
 
-        System.out.println(managementDepartment.filterFemaleGender(Gender.female));
-        System.out.println(managementDepartment.filterOlder(28));
-        System.out.println(managementDepartment.filterYounger(28));
+        System.out.println("Female employees: ");
+        ManagementDepartment.showAllGenderSortEmpl(managementDepartment);
+        System.out.println();
+        System.out.println("Employees older than 28 year: ");
+        ManagementDepartment.showAllOlderEmpl(managementDepartment);
+        System.out.println();
+        System.out.println("Employees younger than 28 year: ");
+        ManagementDepartment.showAllYoungerEmpl(managementDepartment);
+
 
 
     }

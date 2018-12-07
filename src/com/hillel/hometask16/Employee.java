@@ -13,6 +13,14 @@ public class Employee {
         this.gender = gender;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+
     public int getYear() {
         return year;
     }

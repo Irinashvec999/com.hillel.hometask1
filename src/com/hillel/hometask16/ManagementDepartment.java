@@ -1,9 +1,22 @@
 package com.hillel.hometask16;
 
+import java.util.Arrays;
+
 public class ManagementDepartment {
     private final int TOTAL_COUNT = 15;
     private Employee[] employees = new Employee[TOTAL_COUNT];
     private int count;
+    private int countGender;
+    private Employee[] genderSortArr = new Employee[TOTAL_COUNT];
+    private int counterOlderPerson;
+    private Employee[] olderEmployees = new Employee[TOTAL_COUNT];
+    private int counterYoungerPerson = 0;
+    private Employee[] youngerEmployees = new Employee[TOTAL_COUNT];
+
+    public ManagementDepartment() {
+        Employee some = new Employee("0",0,0,Gender.unknown);
+        Arrays.fill(employees,some);
+    }
 
     public void add(Employee employee) {
         employees[count] = employee;
@@ -11,44 +24,59 @@ public class ManagementDepartment {
 
     }
 
-    public Employee[] filterFemaleGender(Gender gender) {
-        int countFemale = 0;
-        Employee[] female = new Employee[countFemale];
+
+    public Employee[] filterGender(Gender gender) {
         for (Employee e : employees) {
-            if (e.getGender() == gender.female) {
-                countFemale++;
-                female[countFemale] = e;
+            if (e.getGender() == gender) {
+                genderSortArr[countGender] = e;
+                countGender++;
             }
         }
-        return female;
+        Employee[] genderSort = Arrays.copyOf(genderSortArr, countGender);
+        return genderSort;
     }
 
     public Employee[] filterOlder(int age) {
         int currentYear = 2008;
         int setYear = currentYear - age;
-        int counterOlderPerson = 0;
-        Employee[] olderEmloyees = new Employee[counterOlderPerson];
+
         for (Employee e : employees) {
             if (e.getYear() > setYear) {
+                olderEmployees[counterOlderPerson] = e;
                 counterOlderPerson++;
-                olderEmloyees[counterOlderPerson] = e;
             }
         }
-        return olderEmloyees;
+        Employee [] olderArr = Arrays.copyOf(olderEmployees,counterOlderPerson);
+        return olderArr;
     }
 
     public Employee[] filterYounger(int age) {
         int currentYear = 2008;
         int setYear = currentYear - age;
-        int counterYoungerPerson = 0;
-        Employee[] youngerEmployees = new Employee[counterYoungerPerson];
+
         for (Employee e : employees) {
-            if (e.getYear() > setYear) {
-                counterYoungerPerson++;
+            if (e.getYear() > setYear && e.getYear()!=0) {
                 youngerEmployees[counterYoungerPerson] = e;
+                counterYoungerPerson++;
             }
         }
-        return youngerEmployees;
+        Employee[] youngerArr = Arrays.copyOf(youngerEmployees,counterYoungerPerson);
+        return youngerArr;
+    }
+    public static void showAllGenderSortEmpl(ManagementDepartment managementDepartment) {
+        for ( Employee e: managementDepartment.filterGender(Gender.female)) {
+            System.out.println(e.getName() +" (" + e.getYear() + ") - salary (hrn) " + e.getSalary() + " - " + e.getGender());
+        }
+    }
+    public static void showAllOlderEmpl(ManagementDepartment managementDepartment) {
+        for ( Employee e: managementDepartment.filterOlder(28)) {
+            System.out.println(e.getName() +" (" + e.getYear() + ") - salary (hrn) " + e.getSalary() + " - " + e.getGender());
+        }
+    }
+    public static void showAllYoungerEmpl(ManagementDepartment managementDepartment) {
+        for ( Employee e: managementDepartment.filterYounger(28)) {
+            System.out.println(e.getName() +" (" + e.getYear() + ") - salary (hrn) " + e.getSalary() + " - " + e.getGender());
+        }
     }
 }
 
