@@ -4,7 +4,6 @@ import java.util.Arrays;
 
 public class Bookshelf {
     private static int totalCount = 4;
-    private static int counterBooks;
     private int counter;
     private static Book[] arrBooks = new Book[totalCount];
 
@@ -16,27 +15,31 @@ public class Bookshelf {
 
 
     public void add(Book book) {
-        for (Book b:arrBooks) {
-            if (book.equals(b)) {
+        for (Book b : arrBooks) {
+            if (book == b){
+                counter++;
                 return;
-            } else {
+            }else if (book.equals(b)) {
+                arrBooks[counter] = null;
+                return;
+            }else {
                 arrBooks[counter] = book;
             }
         }
         counter++;
-        counterBooks++;
     }
 
-    public int getCounterBooks() {
-        return counterBooks;
+
+    public int getCounter() {
+        return counter;
     }
     public static int getTotalCounterBooks(Bookshelf bookshelf1,Bookshelf bookshelf2,Bookshelf bookshelf3){
-        int totalCounterBooks = bookshelf1.getCounterBooks() + bookshelf2.getCounterBooks() + bookshelf3.getCounterBooks();
+        int totalCounterBooks = bookshelf1.getCounter() + bookshelf2.getCounter() + bookshelf3.getCounter();
         return totalCounterBooks;
     }
 
     public static void showAllBooks(Bookshelf bookshelf) {
-        for (int i = 0; i <= counterBooks ; i++) {
+        for (int i = 0; i <= bookshelf.counter-1 ; i++) {
             String author = arrBooks[i].getAuthor().getName();
             String nameBook = arrBooks[i].getNameBook();
             System.out.printf("%s - %s \n", nameBook, author);

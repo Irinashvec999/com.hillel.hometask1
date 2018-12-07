@@ -15,8 +15,11 @@ public class Book {
     @Override
     public boolean equals(Object obj) {
         Book incomeBook = (Book) obj;
-        boolean compareName = nameBook.equals(incomeBook.nameBook);
-        boolean compareAuthor = author.equals(incomeBook.author);
+        String nameIncome = incomeBook.getNameBook();
+        String authorIncome = incomeBook.getAuthor().getName();
+        String thisAuthor = this.getAuthor().getName();
+        boolean compareName = nameBook.equals(nameIncome);
+        boolean compareAuthor = thisAuthor.equals(authorIncome);
         if (compareAuthor && compareName){
             return true;
         }
