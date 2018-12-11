@@ -2,39 +2,42 @@ package com.hillel.hometask13;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Most recommended books for Java beginners:");
-        Book book1 = new Book();
-        book1.setName("Effective Java");
-        Book book2 = new Book();
-        book2.setName("Clean Code");
-        Book book3 = new Book();
-        book3.setName("Java Concurrency in Practice");
-        Book book4 = new Book();
-        book4.setName("Head First Design Patterns");
-        Book book5 = new Book();
-        book5.setName("Spring in Action");
-        Book book6 = new Book();
-        book6.setName("Test Driven");
-        Book book7 = new Book();
-        book7.setName("The Definitive Guide to Java Performance");
-        Book book8 = new Book();
-        book8.setName("Head First Java");
-        Book book9 = new Book();
-        book9.setName("Head First Object-Oriented Analysis and Design");
-        Book book10 = new Book();
-        book10.setName("Java: A Beginner's Guide" + "\n");
 
-        System.out.println("This books were written by really cool authors as:");
+        Book book1 = new Book("Effective Java", 121, new Author("Joshua Bloch", 1976));
+        Book book2 = new Book("Clean Code", 432, new Author("Robert C. Martin", 1963));
+        Book book3 = new Book("Java Concurrency in Practice", 253, new Author("Brian Goetz's", 1958));
+        Book book4 = new Book("Head First Design Patterns", 365, new Author("Craig Walls", 1960));
+        Book book5 = new Book("Spring in Action", 361, new Author("Stefanie Kurtz", 1959));
+        Book book6 = new Book("Test Driven", 298, new Author("Eddie Nelson", 1965));
+        Book book7 = new Book("The Definitive Guide to Java Performance", 283, new Author("Roben Klarck", 1970));
+        Book book8 = new Book("Head First Java", 428, new Author("Daniel Still", 1963));
+        Book book9 = new Book("Head First Object-Oriented Analysis and Design", 289, new Author("Roger Pattisson", 1953));
+        Book book10 = new Book("Head First Java", 428, new Author("Daniel Still", 1963));
 
-        Author author1 = new Author();
-        author1.getName("Joshua Bloch");
-        Author author2 = new Author();
-        author2.getName("Robert C. Martin");
-        Author author3 = new Author();
-        author3.getName("Brian Goetz's");
-        Author author4 = new Author();
-        author4.getName("Craig Walls");
-        Author author5 = new Author();
-        author5.getName("Herbert Schildt");
+        Bookshelf bookshelf1 = new Bookshelf();
+        bookshelf1.add(book1);
+        bookshelf1.add(book2);
+        bookshelf1.add(book3);
+        System.out.println("First bookshelf is contains that books:");
+        Bookshelf.showAllBooks(bookshelf1);
+        System.out.println();
+
+        Bookshelf bookshelf2 = new Bookshelf();
+        bookshelf2.add(book4);
+        bookshelf2.add(book5);
+        bookshelf2.add(book6);
+        System.out.println("Second bookshelf is contains that books:");
+        Bookshelf.showAllBooks(bookshelf2);
+        System.out.println();
+
+        Bookshelf bookshelf3 = new Bookshelf();
+        bookshelf3.add(book7);
+        bookshelf3.add(book8);
+        bookshelf3.add(book9);
+        bookshelf3.add(book10);
+        System.out.println("Third bookshelf is contains that books:");
+        Bookshelf.showAllBooks(bookshelf3);
+        System.out.println();
+        System.out.println("There are " + Bookshelf.getTotalCounterBooks(bookshelf1,bookshelf2,bookshelf3) + " books in the bookshelves");
     }
 }
